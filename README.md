@@ -1,4 +1,4 @@
-##### https://paulgrajewski.medium.com/django-json-field-9f8dcde5af71
+# https://pypi.org/project/django-json-widget/
 
 ### Setup virtual env
 pipenv shell

@@ -48,3 +48,24 @@ class DogCreate(CreateView):
     form_class = DogForm
     template_name = "dog_create.html"
     success_url = "/thanks/"
+
+
+# from django.views.generic import TemplateView
+# class JSONView(JSONResponseMixin, TemplateView):
+#     def render_to_response(self, context, **response_kwargs):
+#         return self.render_to_json_response(context, **response_kwargs)
+
+# from django.views.generic.detail import BaseDetailView
+# class JSONDetailView(JSONResponseMixin, BaseDetailView):
+#     def render_to_response(self, context, **response_kwargs):
+#         return self.render_to_json_response(context, **response_kwargs)
+
+# View to handle JSON response based on get argument
+# from django.views.generic.detail import SingleObjectTemplateResponseMixin
+# class HybridDetailView(JSONResponseMixin, SingleObjectTemplateResponseMixin, BaseDetailView):
+#     def render_to_response(self, context):
+#         # Look for a 'format=json' GET argument
+#         if self.request.GET.get('format') == 'json':
+#             return self.render_to_json_response(context)
+#         else:
+#             return super().render_to_response(context)
